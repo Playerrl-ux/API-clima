@@ -1,0 +1,21 @@
+<div class="conteiner">
+    <div class="list">
+        <h3 style="margin-left: 15px; margin-top: 40px; margin-bottom: 20px;">Favoritos:</h3>
+        <div class="item" *ngFor="let item of itensList">
+            <p (click)="goToDetails(item)">{{item}}</p>
+            <div class="delete" (click)="removeItem(item)">
+                X
+            </div>
+        </div>
+    </div>
+    <div class="add">
+        <div class="conteiner-add">
+            <div class="p">
+                <h6 style="margin-left: 10px;">Adicionar Cidade aos favoritos:</h6>
+            </div>
+            <div class="simple-search">
+                <app-autocomplete class="input text" (change)="addItem($event)"></app-autocomplete>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div>
+    <div style="margin-top: 15px; margin-left: 10px; margin-bottom: 30px;"></div>
+    <app-weather-view *ngIf="singleWeather"
+        [weather]="singleWeather.weather" 
+        [iconUrl]="singleWeather.weather.weather[0].icon" 
+        [hasDetails]="false" [unitSymbol]="unitSymbol" [hasName]="false">
+    </app-weather-view>
+    <div style="margin-bottom: 40px;"></div>
+    <div *ngIf="weather">
+        <app-weather-details *ngFor="let item of weather.list" [weather]="item" 
+        [iconUrl]="item.weather[0].icon" [iconSymbol]="unitSymbol">
+    </app-weather-details>
+    </div>
+    <div style="margin-bottom: 15px;"></div>
+</div>

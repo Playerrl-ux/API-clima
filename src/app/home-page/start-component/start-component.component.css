@@ -1,0 +1,141 @@
+input:focus{
+    outline: none;
+    box-shadow: 0 0 3px rgba(33, 150, 243, 0.5); /* Azul suave */
+    border: 1px solid #2196F3;
+}
+
+input{
+    min-height: 25px;
+    max-width: 400px;
+}
+
+.search{
+    height: 15%;
+    /* background-color: antiquewhite; */
+    display: flex; /* Define grid layout */
+    flex-wrap: wrap;
+   
+    gap: 15px;
+    box-sizing: border-box;
+    
+    /*   */
+}
+
+.simple-search{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    /* margin-top: 8px; */
+    flex-grow: 1;
+    margin-left: 10px;
+    /* margin-bottom: 15px; */
+}
+
+button{
+    width: 50%;
+    height: 53%;
+    appearance: none;
+    border: 1px solid gray;
+    color: white;
+    background-color: gray;
+    border-radius: 5%;
+    margin-right: 10px;
+    min-height: 27px;
+}
+
+button:focus{
+    background-color: rgb(76, 69, 69);
+}
+
+.conteiner-flex{
+    width: 70%;
+    flex: 1 1 45%; /* Flexível: cresce, encolhe e ocupa 45% do espaço disponível */
+    min-width: 200px; /* Mantém um tamanho mínimo */
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+
+
+.p{
+    flex-grow: 1;
+    display: flex;
+    align-items: end;
+}
+
+.autocomplete{
+   margin-right: 10px;
+   margin-bottom: 10px;
+}
+
+.full-heigth{
+    height: 100%;
+}
+
+.dinamic{
+    height: 60%;
+}
+.loader-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Certifica que o loader fica acima de outros elementos */
+    margin-bottom: auto;
+  }
+  
+  .circle-outer {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(7 89 133); /* Cor mais escura */
+    border-radius: 50%;
+    animation: pulse-outer 1.5s infinite ease-in-out;
+    position: absolute;
+    z-index: 1; /* Círculo maior fica atrás */
+  }
+  
+  .circle-inner {
+    width: 30px;
+    height: 30px;
+    background-color: #ecf0f1; /* Cor mais clara */
+    border-radius: 50%;
+    animation: pulse-inner 1.5s infinite ease-in-out;
+    position: absolute;
+    z-index: 2; /* Círculo menor fica à frente */
+  }
+  
+  @keyframes pulse-outer {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.4);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulse-inner {
+    0%, 100% {
+      transform: scale(2.2);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.9;
+    }
+  }
+
+.error{
+    text-align: center;
+    margin-top: 30px;
+    color: red;
+}
+
+.text{
+  margin-right: 5px;
+}
+  

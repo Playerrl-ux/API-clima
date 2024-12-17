@@ -1,0 +1,4 @@
+::ng-deep .ng-dropdown-panel {
+    margin-top: 10px; /* Define a margem superior para todo o menu dropdown */
+}
+

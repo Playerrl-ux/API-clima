@@ -1,0 +1,37 @@
+<div class="full-heigth">
+    <div class="search">
+        <div class="conteiner-flex">
+            <div class="p">
+                <p style="margin-left: 10px; margin-bottom: 5px">Pesquisar:</p>
+            </div>
+            <div class="simple-search">
+                <input type="text" class="text input" [formControl]="form">
+                <button (click)="search(form.value)" [disabled]="!form.valid">Pesquisar</button>
+            </div>
+        </div>
+        <div class="conteiner-flex">
+            <div class="p">
+                <p style="margin-left: 10px; margin-bottom: 5px; margin-top: 0px">Pesquisar com autocomplete:</p>
+            </div>
+            <div class="simple-search">
+                <app-autocomplete class="input text" (change)="search($event)"></app-autocomplete>
+            </div>
+            <!-- <app-autocomplete class="input"></app-autocomplete> -->
+        </div>
+    </div>
+    <div class="dinamic">
+        <div class="loader-container" *ngIf="isLoading">
+            <div class="circle-outer">
+            </div>
+            <div class="circle-inner">
+            </div>
+        </div>
+        <div *ngIf="_weather && !isLoading && !isError">
+            <app-weather-view [iconUrl]="iconUrl" [weather]="_weather" [unitSymbol]="unitSymbol"
+            (clickEvent)="doAddOrRemove()" [isAdd]="isAdd"></app-weather-view>
+        </div>
+        <div class="error" *ngIf="isError && !isLoading">
+            <h2>Não foi possível obter informações sobre o tempo nesse local</h2>
+        </div>
+    </div>
+</div>

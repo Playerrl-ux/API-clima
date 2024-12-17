@@ -1,0 +1,9 @@
+<ng-select
+  [(ngModel)]="selectedCar"
+  [items]="cars" 
+  bindLabel="name" 
+  bindValue="id" 
+  [searchable]="true" 
+  (search)="search($event.term)"
+  (change)="onChange($event)">
+</ng-select>

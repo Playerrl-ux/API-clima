@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="date"><p>{{weather.dt_txt| date}}</p></div>
+    <div class="infos">
+        <div class="icon-text">
+            <div class="img-conteiner">
+                <img [src]="iconUrl" alt="wwrwer">
+            </div>
+            <p style="margin-top: 5px"> {{weather.weather[0].description}} </p>
+        </div>
+        <div>
+            <div><h2>{{weather.main.temp | number:'1.1-1' }} {{iconSymbol}}</h2></div>
+            
+        </div>
+        <div>
+            <div>Humidade: {{weather.main.humidity}}%</div>
+            <div>Velocidade do vento: {{weather.wind.speed}} m/s</div>
+        </div>
+    </div>
+
+</div>
+

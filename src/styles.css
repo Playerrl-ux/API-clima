@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+
+    
+}
+
+body{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+.input{
+    appearance: none;
+    border: none;
+    border: 1px solid rgb(212, 211, 211);
+    border-radius: 3%;
+    width: 100%;
+    height: 50%;
+    max-width: 400px;
+    min-height: 20px;
+    min-width: 150px;
+}
+
+.conteiner-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+
+input:focus{
+    outline: none;
+    box-shadow: 0 0 3px rgba(33, 150, 243, 0.5); /* Azul suave */
+    border: 1px solid #2196F3;
+}
+
+button{
+    max-width: 200px;
+    min-height: 20px;
+    margin-right: 2px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
